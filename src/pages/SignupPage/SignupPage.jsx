@@ -1,5 +1,5 @@
 
-import { Button, Form, Grid, Header, Segment } from "semantic-ui-react";
+import { Button, Form, Grid, Header, Segment, Icon } from "semantic-ui-react";
 import { useState } from "react";
 import ErrorMessage from '../../components/ErrorMessage/ErrorMessage';
 

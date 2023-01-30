@@ -4,12 +4,17 @@ import { Form, Segment, Button } from "semantic-ui-react";
 
 function AddRecipeForm({handleAddPost}) {
 
-  const [description, setDescription] = useState('');
+  const [directions, setDirections] = useState('');
   const [title, setTitle] = useState('')
   const [photo, setPhoto] = useState(null)
 
-  function handleChange(e){
-	setDescription(e.target.value)
+  function handleDirectionsChange(e){
+	setDirections(e.target.value)
+  
+  }
+  function handleTitleChange(e) {
+    setTitle(e.target.value)
+
   }
 
   function handleFileInput(e){
@@ -23,7 +28,7 @@ function AddRecipeForm({handleAddPost}) {
 	// to our express server
 	const formData = new FormData()
   formData.append('title', title)
-	formData.append('description', description);
+	formData.append('directions', directions);
 	formData.append('photo', photo)
 	handleAddPost(formData)
   }
@@ -36,15 +41,15 @@ function AddRecipeForm({handleAddPost}) {
           name="title"
           value={title}
           placeholder="What do you call this dish?"
-          onChange={handleChange}
+          onChange={handleTitleChange}
           required
         />
         <Form.Input
           className="form-control"
-          name="description"
-          value={description}
+          name="directions"
+          value={directions}
           placeholder="How do we make this dish?"
-          onChange={handleChange}
+          onChange={handleDirectionsChange}
           required
         />
         <Form.Input
@@ -55,7 +60,7 @@ function AddRecipeForm({handleAddPost}) {
           onChange={handleFileInput}
         />
         <Button type="submit" className="btn">
-          Recipe
+          Post Recipe
         </Button>
       </Form>
     </Segment>

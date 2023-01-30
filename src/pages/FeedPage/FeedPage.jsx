@@ -1,5 +1,5 @@
 import PageHeader from "../../components/PageHeader/PageHeader";
-import AddPuppyForm from "../../components/AddPuppyForm/AddPuppyForm";
+import AddRecipeForm from "../../components/AddRecipeForm/AddRecipeForm";
 import PostDisplay from "../../components/PostDisplay/PostDisplay";
 import Loader from "../../components/Loader/Loader";
 
@@ -104,7 +104,7 @@ function FeedPage({ loggedUser, handleLogout }) {
             </Grid.Row>
             <Grid.Row>
                 <Grid.Column style={{ maxWidth: 450 }}>
-                    <AddPuppyForm handleAddPost={handleAddPost} />
+                    <AddRecipeForm handleAddPost={handleAddPost} />
                 </Grid.Column>
             </Grid.Row>
             <Grid.Row>

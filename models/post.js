@@ -10,7 +10,8 @@ const postSchema = new mongoose.Schema({
     user: { type: mongoose.Schema.Types.ObjectId, ref: 'User'}, // referencing a model
     photoUrl: String,
     ingredients: String,
-    description: String,
+    title: String,
+    directions: String,
     likes: [likesSchema] // embedded schema// One Post has many Likes!
     // One Post has many Likes, One to many relationship
     // we are using embedding because likes will always be with the post, 
