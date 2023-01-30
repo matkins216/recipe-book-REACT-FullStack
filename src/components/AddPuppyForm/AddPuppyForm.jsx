@@ -2,13 +2,14 @@ import { set } from "mongoose";
 import { useState } from "react";
 import { Form, Segment, Button } from "semantic-ui-react";
 
-function AddPuppyForm({handleAddPost}) {
+function AddRecipeForm({handleAddPost}) {
 
-  const [caption, setCaption] = useState('');
+  const [description, setDescription] = useState('');
+  const [title, setTitle] = useState('')
   const [photo, setPhoto] = useState(null)
 
   function handleChange(e){
-	setCaption(e.target.value)
+	setDescription(e.target.value)
   }
 
   function handleFileInput(e){
@@ -21,7 +22,8 @@ function AddPuppyForm({handleAddPost}) {
 	// we have to make form data because we are sending over a photo
 	// to our express server
 	const formData = new FormData()
-	formData.append('caption', caption);
+  formData.append('title', title)
+	formData.append('description', description);
 	formData.append('photo', photo)
 	handleAddPost(formData)
   }
@@ -31,9 +33,17 @@ function AddPuppyForm({handleAddPost}) {
       <Form autoComplete="off" onSubmit={handleSubmit}>
         <Form.Input
           className="form-control"
-          name="caption"
-          value={caption}
-          placeholder="What's on your pups mind?"
+          name="title"
+          value={title}
+          placeholder="What do you call this dish?"
+          onChange={handleChange}
+          required
+        />
+        <Form.Input
+          className="form-control"
+          name="description"
+          value={description}
+          placeholder="How do we make this dish?"
           onChange={handleChange}
           required
         />
@@ -45,11 +55,11 @@ function AddPuppyForm({handleAddPost}) {
           onChange={handleFileInput}
         />
         <Button type="submit" className="btn">
-          ADD PUPPY
+          Recipe
         </Button>
       </Form>
     </Segment>
   );
 }
 
-export default AddPuppyForm;
+export default AddRecipeForm;

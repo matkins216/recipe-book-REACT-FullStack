@@ -81,7 +81,7 @@ function SignUpPage({ handleSignUpOrLogin }) {
         <Grid textAlign="center" style={{ height: "100vh" }} verticalAlign="middle">
             <Grid.Column style={{ maxWidth: 450 }}>
                 <Header as="h2" color="purple" textAlign="center">
-                    Sign Up
+                    <Icon name="food"></Icon> Sign Up
                 </Header>
                 <Form autoComplete="off" onSubmit={handleSubmit}>
                     <Segment stacked>
