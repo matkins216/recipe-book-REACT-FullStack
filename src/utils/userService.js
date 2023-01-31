@@ -58,6 +58,7 @@ function login(creds) {
 // this is the function that makes a request to the profile controller function on the express back end api
 function getProfile(username) {
   return fetch(BASE_URL + username, {
+    // method: 'GET',
     headers: {
       Authorization: "Bearer " + tokenService.getToken()
       //this is how we grab the token from local storage

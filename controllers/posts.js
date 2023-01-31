@@ -19,7 +19,7 @@ function create(req, res) {
   if(!req.file) return res.status(400).json({err: 'No file was submitted'});
 
   // generate our key for our photo on aws
-  const key = `recipebook/posts/${uuidv4()}-${req.file.originalname}`;
+  const key = `pupstagram-10-31/posts/${uuidv4()}-${req.file.originalname}`;
   const params = { Bucket: BUCKET_NAME, Key: key, Body: req.file.buffer}
   // upload image to aws
   s3.upload(params, async function(err, data){
@@ -32,10 +32,12 @@ function create(req, res) {
       // adding our post information to the database
       const post = await Post.create({
         user: req.user._id,
+        title: req.body.title,
         description: req.body.description,
         ingredients: req.body.ingredients,
         photoUrl: data.Location // <- this is from aws, it is the URL that our picture exists at in s3 bucket
       })
+      console.log(req.body)
 
       await post.populate('user')// populating on a document "post"
       // respond to the client

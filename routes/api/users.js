@@ -12,7 +12,7 @@ router.post('/login', usersCtrl.login);
 // /api/users/jim
 // /api/users/kate
 // /api/users/ragnar
-// router.get('/:username', usersCtrl.profile);
+router.get('/:username', usersCtrl.profile);
 
 /*---------- Protected Routes ----------*/
 
