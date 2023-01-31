@@ -24,6 +24,8 @@ function PageHeader({ loggedUser, handleLogout }) {
           ></Image>
         </Link>
       </Header>
+
+      
     </Segment>
   );
 }
