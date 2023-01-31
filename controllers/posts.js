@@ -33,7 +33,7 @@ function create(req, res) {
       const post = await Post.create({
         user: req.user._id,
         title: req.body.title,
-        description: req.body.description,
+        directions: req.body.directions,
         ingredients: req.body.ingredients,
         photoUrl: data.Location // <- this is from aws, it is the URL that our picture exists at in s3 bucket
       })

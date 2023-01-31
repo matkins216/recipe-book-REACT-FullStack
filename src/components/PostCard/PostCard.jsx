@@ -46,9 +46,15 @@ function PostCard({ post, isProfile, addLike, removeLike, loggedUser }) {
       <Image src={`${post?.photoUrl}`} wrapped ui={false} />
       <Card.Header>{post.title}</Card.Header>
       <Card.Content>
-        {post.directions}
+        
+        <Card.Description>
+          <strong>Ingredients:</strong>{post.ingredients}
+          {"\n"}
+          <strong>Directions:</strong>{post.directions}
+        </Card.Description>
+       
+      
       </Card.Content>
-      <Card.Content>{post.ingredients}</Card.Content>
       <Card.Content extra textAlign={"right"}>
         <Icon name={"heart"} size="large" color={likeColor} onClick={clickHandler}/>
         {post.likes.length} Likes
