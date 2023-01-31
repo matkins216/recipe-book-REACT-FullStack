@@ -5,14 +5,17 @@ import PageHeader from '../../components/PageHeader/PageHeader'
 
 function Layout({loggedUser, handleLogout}) {
 	return ( 
-		<Grid>
+		<Grid columns={3}>
 			<Grid.Row>
-				<Grid.Column>
+				<Grid.Column verticalAlign='left'>
 					<PageHeader loggedUser={loggedUser}  handleLogout={handleLogout}/>
 				</Grid.Column>
 			</Grid.Row>
-			<Grid.Row>
 				<Grid.Column>
+
+				</Grid.Column>
+			<Grid.Row>
+				<Grid.Column textAlign='right'>
 					<Outlet />
 				</Grid.Column>
 			</Grid.Row>
