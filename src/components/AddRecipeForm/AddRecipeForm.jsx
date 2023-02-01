@@ -1,4 +1,4 @@
-import { set } from "mongoose";
+
 import { useState } from "react";
 import { Form, Segment, Button } from "semantic-ui-react";
 
@@ -14,6 +14,11 @@ function AddRecipeForm({handleAddPost}) {
   }
 
   function handleIngredientsChange(e) {
+    // console.log(e.target.value.split(','))
+    // const ingredientsArr = e.target.value.split(',')
+    // console.log(ingredientsArr, 'this is the spot for my ingredients array')
+    // setIngredients(ingredientsArr)
+    
     setIngredients(e.target.value)
 
   }

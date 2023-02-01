@@ -1,4 +1,4 @@
-import { Card, Icon, Image } from "semantic-ui-react";
+import { Card, Icon, Image, List } from "semantic-ui-react";
 import { Link } from "react-router-dom";
 
 
@@ -18,6 +18,15 @@ function PostCard({ post, isProfile, addLike, removeLike, loggedUser }) {
                                           /// FOR THE ARGUMENTS go remind yourself what they need by looking at the util function! or your routes on the backend
   //if the logged user’s username is NOT in the likes array,
   // then the logged in user has NOT like the photo so the color should be grey
+
+  const ingredients = post.ingredients
+  
+ 
+  // const ingredientsList = ingredients.Map((ingredient, index) => (
+  //   <List>key={index}>
+  //     <List.Item>{ingredient}</List.Item>
+  //   </List>
+  // ));
 
 
   return (
@@ -48,9 +57,11 @@ function PostCard({ post, isProfile, addLike, removeLike, loggedUser }) {
       <Card.Content>
         
         <Card.Description>
-          <strong>Ingredients:</strong>{post.ingredients}
-          {"\n"}
+          
+            <strong>Ingredients:</strong>{ingredients}
+          {'\n'}
           <strong>Directions:</strong>{post.directions}
+      
         </Card.Description>
        
       
