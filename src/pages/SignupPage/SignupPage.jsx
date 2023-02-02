@@ -80,7 +80,7 @@ function SignUpPage({ handleSignUpOrLogin }) {
     return (
         <Grid textAlign="center" style={{ height: "100vh" }} verticalAlign="middle">
             <Grid.Column style={{ maxWidth: 450 }}>
-                <Header as="h2" color="purple" textAlign="center">
+                <Header as="h2" color="green" textAlign="center">
                     <Icon name="food"></Icon> Sign Up
                 </Header>
                 <Form autoComplete="off" onSubmit={handleSubmit}>
@@ -120,7 +120,7 @@ function SignUpPage({ handleSignUpOrLogin }) {
                             label="bio"
                             name="bio"
                             value={state.bio}
-                            placeholder="Tell us more about your dogs..."
+                            placeholder="Tell us more about yourself"
                             onChange={handleChange}
                         />
                         <Form.Field>

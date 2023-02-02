@@ -3,6 +3,7 @@ const router = express.Router();
 import postsCtrl  from '../../controllers/posts.js';
 import multer from 'multer'
 const upload = multer()
+
 // /*---------- Public Routes ----------*/
 
 // single('photo') matches formData.append('photo', photo) in addPuppyForm
