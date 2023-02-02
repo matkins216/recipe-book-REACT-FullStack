@@ -5,16 +5,16 @@ import { Header, Segment, Image, Icon, Menu } from "semantic-ui-react";
 function PageHeader({ loggedUser, handleLogout }) {
   return (
     <Segment clearing>
-      <Header as="h2" floated="right" >
+      <Header  as="h2" floated="right" >
         <Link to="/">
           <Icon name="home"></Icon>
         </Link>
         <Link to="" onClick={handleLogout}>
           Logout
         </Link>
-        <Link to="/discover" floated='right'>
+        {/* <Link to="/discover" floated='right'>
           <Icon name="globe"></Icon>
-        </Link>
+        </Link> */}
       </Header>
       <Header as="h2" floated="left">
         <Link to={`/${loggedUser?.username}`}>

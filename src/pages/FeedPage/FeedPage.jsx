@@ -98,8 +98,8 @@ function FeedPage({ loggedUser, handleLogout }) {
     return (
         <Grid centered>
             <Grid.Row>
-                <Grid.Column>
-                    <PageHeader handleLogout={handleLogout} loggedUser={loggedUser} style={{ maxWidth: 1600 }} />
+                <Grid.Column style={{ maxWidth: 1800 }}>
+                    <PageHeader handleLogout={handleLogout} loggedUser={loggedUser} />
                 </Grid.Column>
             </Grid.Row>
             <Grid.Row>
@@ -108,7 +108,7 @@ function FeedPage({ loggedUser, handleLogout }) {
                 </Grid.Column>
             </Grid.Row>
             <Grid.Row>
-                <Grid.Column style={{ maxWidth: 500 }}>
+                <Grid.Column style={{ maxWidth: 450 }}>
                     <PostDisplay
                         posts={posts}
                         numPhotosCol={1}

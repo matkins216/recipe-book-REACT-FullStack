@@ -1,0 +1,10 @@
+.root {
+  color: grey;
+}
+body {
+  background: rgb(144, 235, 235);
+}
+
+div.ui.raisedcard.card {
+  background: yellow;
+}
