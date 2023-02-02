@@ -6,6 +6,7 @@ import SignUpPage from "./pages/SignupPage/SignupPage";
 import LoginPage from "./pages/LoginPage/LoginPage";
 import FeedPage from "./pages/FeedPage/FeedPage";
 import ProfilePage from "./pages/ProfilePage/ProfilePage";
+import DiscoverPage from "./pages/DiscoverPage/DiscoverPage";
 
 // import the userService so we have a function (getUser) that can get the jwt token
 // from localstorage and decode it
@@ -48,6 +49,10 @@ export default function App() {
           element={
             <ProfilePage loggedUser={user} handleLogout={handleLogout} />
           }
+        />
+        <Route
+          path="/discover"
+          element={<DiscoverPage loggedUser={user} handleLogout={handleLogout} />}
         />
       </Routes>
     );

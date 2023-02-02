@@ -1,7 +1,8 @@
 import User from "../models/user.js";
 import Post from '../models/post.js';
-import S3 from "aws-sdk/clients/s3.js";
-const s3 = new S3(); // initate the S3 constructor which can talk to aws/s3 our bucket!
+
+import { s3 } from '../config/s3-config.js'
+ // initate the S3 constructor which can talk to aws/s3 our bucket!
 // import uuid to help generate random names
 import { v4 as uuidv4 } from "uuid";
 // since we are sharing code, when you pull you don't want to have to edit the
