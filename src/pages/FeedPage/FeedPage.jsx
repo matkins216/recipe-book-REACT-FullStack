@@ -103,12 +103,12 @@ function FeedPage({ loggedUser, handleLogout }) {
                 </Grid.Column>
             </Grid.Row>
             <Grid.Row>
-                <Grid.Column style={{ maxWidth: 600 }}>
+                <Grid.Column style={{ maxWidth: 800 }}>
                     <AddRecipeForm handleAddPost={handleAddPost} />
                 </Grid.Column>
             </Grid.Row>
             <Grid.Row>
-                <Grid.Column style={{ maxWidth: 1800}}>
+                <Grid.Column style={{ maxWidth: 1600}}>
                     <PostDisplay
                         posts={posts}
                         numPhotosCol={3}
