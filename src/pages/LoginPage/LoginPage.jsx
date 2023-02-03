@@ -50,12 +50,12 @@ export default function LoginPage(props) {
       style={{ height: "100vh", width: "100vw" }}
       verticalAlign="middle"
     >
-      <Grid.Column style={{ maxWidth: 450 }}>
-        <Header as="h2" color="purple" textAlign="center">
+      <Grid.Column style={{ maxWidth: 600 }}>
+        <Header as="h2" color="green" textAlign="center">
           Login
         </Header>
-        <Form onSubmit={handleSubmit}>
-          <Segment stacked>
+        <Form onSubmit={handleSubmit} textAlign="center">
+          <Segment textAlign="center" raised={true} stacked>
             <Form.Input
               type="email"
               name="email"
@@ -73,7 +73,7 @@ export default function LoginPage(props) {
               required
             />
             <Button
-              color="purple"
+              color="green"
               fluid
               size="large"
               type="submit"
