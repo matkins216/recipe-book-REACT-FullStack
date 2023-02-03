@@ -35,7 +35,7 @@ function PostCard({ post, isProfile, addLike, removeLike, loggedUser }) {
         ""
       ) : (
         <Card.Content textAlign="left">
-          <Card.Header>
+          <Card.Header TextAlign="right">
             <Link to={`/${post.user.username}`}>
               <Image
                 size="large"
@@ -52,8 +52,8 @@ function PostCard({ post, isProfile, addLike, removeLike, loggedUser }) {
         </Card.Content>
       )}
 
-      <Image src={`${post?.photoUrl}`} wrapped ui={false} />
-      <Card.Header>{post.title}</Card.Header>
+      <Image verticalAlign="top" src={`${post?.photoUrl}`} wrapped ui={false} />
+      <Card.Header textAlign="center">{post.title}</Card.Header>
       <Card.Content>
 
         <Card.Description>
