@@ -27,7 +27,7 @@ function PostCard({ post, isProfile, addLike, removeLike, loggedUser }) {
   //     <List.Item>{ingredient}</List.Item>
   //   </List>
   // ));
-
+  console.log("data", ingredients?.replace(',', ', '))
 
   return (
     <Card key={post._id} raised>
