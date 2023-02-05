@@ -57,11 +57,11 @@ function PostCard({ post, isProfile, addLike, removeLike, loggedUser }) {
         <Card.Description>
           <div>
             <strong>Ingredients:</strong>
-            <ul>
+            <List>
               {formattedIngredients?.map(ingredient => (
-                <li>{ingredient}</li>
+                <List.Item>{ingredient}</List.Item>
               ))}
-            </ul>
+            </List>
           </div>
           <div>
             <strong>Directions:</strong>{post.directions}
