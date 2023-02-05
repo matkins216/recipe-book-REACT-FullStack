@@ -58,7 +58,7 @@ function PostCard({ post, isProfile, addLike, removeLike, loggedUser }) {
 
         <Card.Description>
           <div>
-            <strong>Ingredients:</strong>{ingredients?.replace(',', ', ')}
+            <strong>Ingredients:</strong>{ingredients?.replace(/,/g, ', ')}
           </div>
           <div>
             <strong>Directions:</strong>{post.directions}
