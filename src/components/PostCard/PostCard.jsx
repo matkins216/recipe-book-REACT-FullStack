@@ -27,12 +27,6 @@ function PostCard({ post, isProfile, addLike, removeLike, loggedUser }) {
 
   console.log('stuff', formattedIngredients);
 
-  const renderIngredientList = (formattedIngredients) => {
-    formattedIngredients?.map(ingredient => (
-      <li>{ingredient}</li>
-    ))
-  }
-  
   return (
     <Card key={post._id} raised>
       {isProfile ? (
@@ -64,7 +58,9 @@ function PostCard({ post, isProfile, addLike, removeLike, loggedUser }) {
           <div>
             <strong>Ingredients:</strong>
             <ul>
-              {renderIngredientList()}
+              {formattedIngredients?.map(ingredient => (
+                <li>{ingredient}</li>
+              ))}
             </ul>
           </div>
           <div>
