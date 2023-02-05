@@ -22,13 +22,17 @@ function PostCard({ post, isProfile, addLike, removeLike, loggedUser }) {
   const ingredients = post.ingredients
 
 
-  // const ingredientsList = ingredients.Map((ingredient, index) => (
-  //   <List>key={index}>
-  //     <List.Item>{ingredient}</List.Item>
-  //   </List>
-  // ));
-  console.log("data", ingredients?.replace(/,/g, ', '))
+  const spaceOutIngredients = ingredients?.replace(/,/g, ', ');
+  const formattedIngredients = spaceOutIngredients?.split(', ');
 
+  console.log('stuff', formattedIngredients);
+
+  const renderIngredientList = (formattedIngredients) => {
+    formattedIngredients?.map(ingredient => (
+      <li>{ingredient}</li>
+    ))
+  }
+  
   return (
     <Card key={post._id} raised>
       {isProfile ? (
@@ -58,7 +62,10 @@ function PostCard({ post, isProfile, addLike, removeLike, loggedUser }) {
 
         <Card.Description>
           <div>
-            <strong>Ingredients:</strong>{ingredients?.replace(/,/g, ', ')}
+            <strong>Ingredients:</strong>
+            <ul>
+              {renderIngredientList()}
+            </ul>
           </div>
           <div>
             <strong>Directions:</strong>{post.directions}
