@@ -14,20 +14,13 @@ import favicon  from 'serve-favicon';
 
 import './config/database.js'
 
-// Require controllers here
 const app = express();
 
 app.set('view engine', 'ejs');
 
-// console.log(assetsRouter)
-// add in when the app is ready to be deployed
-// app.use(favicon(path.join(__dirname, 'build', 'favicon.ico')));
 app.use(logger('dev'));
 app.use(express.json());
-// app.use("/src", assetsRouter);
-// Configure the auth middleware
-// This decodes the jwt token, and assigns
-// the user information to req.user
+
 import auth from './config/auth.js'
 
 app.use(auth); 

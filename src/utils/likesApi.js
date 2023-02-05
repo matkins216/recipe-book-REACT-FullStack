@@ -7,7 +7,6 @@ export function create(postId) {
         method: 'POST',
         headers: {
             Authorization: "Bearer " + tokenService.getToken()
-            //this is how we grab the token from local storage
         }
     }).then(res => {
         if (res.ok) return res.json()
@@ -16,20 +15,19 @@ export function create(postId) {
 }
 
 export function deleteLike(likeID) {
-    return fetch(`${BASE_URL}likes/${likeID}`, { // since this is sending a photo (form data) no need to do JSON things
+    return fetch(`${BASE_URL}likes/${likeID}`, { 
         method: 'DELETE',
         headers: {
             Authorization: "Bearer " + tokenService.getToken()
-            //this is how we grab the token from local storage
+            
         }
 
     }).then((responseFromTheServer) => {
-        if (responseFromTheServer.ok) return responseFromTheServer.json() // return if everything okay
+        if (responseFromTheServer.ok) return responseFromTheServer.json() 
 
-        // this is the return if there was an error from the server
+        
         return responseFromTheServer.json().then(res => {
-            throw new Error('Something went wrong in DELETE LIKE check terminal'); // < this goes to the catch block
-            // when you call the create function (in handleAddPost in the feed page)
+            throw new Error('Something went wrong in DELETE LIKE check terminal'); 
         })
     })
 }

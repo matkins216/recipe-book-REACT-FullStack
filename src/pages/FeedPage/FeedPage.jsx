@@ -21,47 +21,39 @@ function FeedPage({ loggedUser, handleLogout }) {
     const [error, setError] = useState("");
 
     async function addLike(postId) {
-        // postId exists in the card component
         try {
             const response = await likesAPI.create(postId);
             console.log(response, " response from likes APi");
-            // update the cards with likes array
-            getPosts();// getPosts updates our state, so we'll see a change in the UI, heart will go to red
+            getPosts();
         } catch (err) {
             console.log(err.message, " add like");
         }
     }
 
     async function removeLike(likeId) {
-        // postId exists in the card component
         try {
             const response = await likesAPI.deleteLike(likeId);
             console.log(response, " response from likes APi");
-            // update the cards with likes array
-            getPosts();// getPosts updates our state, so we'll see a change in the UI, heart will go to grey
+            
+            getPosts();
         } catch (err) {
             console.log(err.message, " remove like");
         }
     }
 
-    // Why?
-    // Creating a POST (C)RUD
-    // cuz we want to update state whenever we change a POST CRUD operations*
+   
     async function handleAddPost(post) {
-        // post, is coming from the addPostForm component, when we call this function onSubmit props.handleAddPost(formData)
+        
         try {
-            // this is where we will make the api call to our server
-            // because we'll get the response and then we can update state to reflect that change
-            // like adding a new post
+            
             setLoading(true);
-            const response = await postsAPI.create(post); // waiting for the json to be return from the server and parsed by us!
+            const response = await postsAPI.create(post); 
 
-            // data is the response from the api, the result of the .then if(res.ok) return res.json() in the create postAPI utils function
+            
             console.log(response, " handle add post");
-            setPosts([response.post, ...posts]); /// ...posts would keep all the posts in the previous states array
+            setPosts([response.post, ...posts]); 
             setLoading(false);
         } catch (err) {
-            // this is the error from the throw block, in the postsAPI.create function
             console.log(err.message, "error in addPost");
             setError("Error creating post, please try again");
         }
@@ -80,12 +72,9 @@ function FeedPage({ loggedUser, handleLogout }) {
     }
 
     useEffect(() => {
-        //Getting posts, C(R)UD
 
         getPosts();
-    }, []); // This is useEffect runs once when the Feed component
-    // loads
-
+    }, []); 
     if (error) {
         return (
             <>

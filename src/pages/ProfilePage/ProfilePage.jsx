@@ -28,20 +28,17 @@ function ProfilePage({ loggedUser, handleLogout }) {
     try {
       const response = await likesAPI.create(postId);
       console.log(response, " response from likes APi");
-      // update the cards with likes array
-      getProfile(); // getProfile updates our state, so we'll see a change in the UI, heart will go to red
+      getProfile(); 
     } catch (err) {
       console.log(err.message, " add like");
     }
   }
 
   async function removeLike(likeId) {
-    // postId exists in the card component
     try {
       const response = await likesAPI.deleteLike(likeId);
       console.log(response, " response from likes APi");
-      // update the cards with likes array
-      getProfile(); // getProfile updates our state, so we'll see a change in the UI, heart will go to grey
+      getProfile();
     } catch (err) {
       console.log(err.message, " remove like");
     }
@@ -49,10 +46,9 @@ function ProfilePage({ loggedUser, handleLogout }) {
 
   async function getProfile() {
     try {
-      // making the API CALL
       const response = await userService.getProfile(username);
 
-      setLoading(false); // set loading to false
+      setLoading(false); 
       setPosts(response.data);
       setProfileUser(response.user);
       console.log(response, " <- data is getprofile");
@@ -62,8 +58,7 @@ function ProfilePage({ loggedUser, handleLogout }) {
         " error in getProfile something went wrong with the getProfile api request, check server terminal"
       );
       setLoading(false);
-      setError("Profile does not exist"); // <- this is what we show
-      // on the page
+      setError("Profile does not exist"); 
     }
   }
 

@@ -46,26 +46,21 @@ function login(creds) {
     headers: new Headers({ 'Content-Type': 'application/json' }),
     body: JSON.stringify(creds)
   })
-    .then(res => {// this is where we recieve the respons from the login controller
-      // Valid login if we have a status of 2xx (res.ok)
+    .then(res => {
       if (res.ok) return res.json();
       throw new Error('Bad Credentials!');
     })
     .then(({ token }) => tokenService.setToken(token));
 }
 
-// the definition
-// this is the function that makes a request to the profile controller function on the express back end api
 function getProfile(username) {
   return fetch(BASE_URL + username, {
     // method: 'GET',
     headers: {
       Authorization: "Bearer " + tokenService.getToken()
-      //this is how we grab the token from local storage
     }
   }).then(res => {
-    if (res.ok) return res.json() // decoding the json from the server response
-    // so that we can interact with it like a regular javascript object
+    if (res.ok) return res.json() 
     throw new Error('Error from getProfile request, check the server terminal')
   })
 }

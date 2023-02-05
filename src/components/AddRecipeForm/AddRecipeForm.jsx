@@ -14,10 +14,7 @@ function AddRecipeForm({handleAddPost}) {
   }
 
   function handleIngredientsChange(e) {
-    // console.log(e.target.value.split(','))
-    // const ingredientsArr = e.target.value.split(',')
-    // console.log(ingredientsArr, 'this is the spot for my ingredients array')
-    // setIngredients(ingredientsArr)
+   
     
     setIngredients(e.target.value)
 
@@ -35,8 +32,7 @@ function AddRecipeForm({handleAddPost}) {
   function handleSubmit(e){
 	e.preventDefault();
 
-	// we have to make form data because we are sending over a photo
-	// to our express server
+	
 	const formData = new FormData()
   formData.append('title', title);
   formData.append('ingredients', ingredients);
