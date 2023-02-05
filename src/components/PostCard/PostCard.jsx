@@ -22,10 +22,22 @@ function PostCard({ post, isProfile, addLike, removeLike, loggedUser }) {
   const ingredients = post.ingredients
 
 
-  const spaceOutIngredients = ingredients?.replace(/,/g, ', ');
-  const formattedIngredients = spaceOutIngredients?.split(', ');
+  const elimateSpaces = (longString) => {
+    return longString?.replace(/,/g, ', ');
+  }
 
-  console.log('stuff', formattedIngredients);
+  const formatTheGoodies = (string) => {
+    return string.split(', ')
+  }
+
+  const spaceOutIngredients = elimateSpaces(ingredients);
+
+  const formattedIngredients = formatTheGoodies(spaceOutIngredients);
+
+  const spacedOutDirections = elimateSpaces(post.directions);
+  const formattedDirections = formatTheGoodies(spacedOutDirections);
+
+  console.log('formattedDirections', formattedDirections);
 
   return (
     <Card key={post._id} raised>
@@ -66,7 +78,7 @@ function PostCard({ post, isProfile, addLike, removeLike, loggedUser }) {
           <div>
             <strong>Directions:</strong>
             <List>
-              {post.directions?.replace(/,/g, ', ')?.split(', ')?.map(directionStep => (
+              {formattedDirections?.map(directionStep => (
                 <List.Item>{directionStep}</List.Item>
               ))}
             </List>
