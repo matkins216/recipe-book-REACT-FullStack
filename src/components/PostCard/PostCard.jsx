@@ -64,7 +64,12 @@ function PostCard({ post, isProfile, addLike, removeLike, loggedUser }) {
             </List>
           </div>
           <div>
-            <strong>Directions:</strong>{post.directions}
+            <strong>Directions:</strong>
+            <List>
+              {post.directions?.replace(/,/g, ', ')?.split(', ')?.map(directionStep => (
+                <List.Item>{directionStep}</List.Item>
+              ))}
+            </List>
           </div>
         </Card.Description>
 
