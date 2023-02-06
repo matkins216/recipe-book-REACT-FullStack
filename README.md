@@ -1,4 +1,4 @@
-# Task Terminator
+# Recipe Book
 Created by: Matthew Atkins
 - - -
 "Launch Recipe Book here"
@@ -13,7 +13,7 @@ Users on Recipe Book will be able to upload a photo of their recipe and give ste
 
 ## How To Use/Wireframe (Images Attached):
 - - -
-1. Homepage/Landing Page:(Screenshot from 2023-02-06 06-16-31.png)
+1. Homepage/Landing Page:(public/home.png)
     This will be your feed where you can view other users' posts along with your own. You can like recipes on this page. You will also be able to post your own recipes from here.
 
 2. Profile Page:
@@ -29,12 +29,12 @@ Users on Recipe Book will be able to upload a photo of their recipe and give ste
 
 ## Trello:
 - - -
-![trelloBoard](Screenshot from 2023-02-06 06-20-58.png)
+![trelloBoard](public/trello.png)
 https://trello.com/b/dI31QbTy/project-4
 
 ## ERD:
 - - -
-![erdPic](Screenshot from 2023-02-05 18-38-26.png)
+![erdPic](public/erd1.png)
 
 ##  Technologies Used:
 - - -
