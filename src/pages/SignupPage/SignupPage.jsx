@@ -121,9 +121,9 @@ function SignUpPage({ handleSignUpOrLogin }) {
                         <Button type="submit" className="btn">
                             Signup
                         </Button>
-                        <Button>
-                            <LoginPage />
-                        </Button>
+                        <Message>
+                            Been here before? <Link to="/login">Login</Link>
+                        </Message>
                     </Segment>
                     {error ? <ErrorMessage error={error} /> : null}
                 </Form>
