@@ -121,13 +121,13 @@ function SignUpPage({ handleSignUpOrLogin }) {
                         <Button type="submit" className="btn">
                             Signup
                         </Button>
-                      
+                        <Message>
+                            Been here before? <Link to="/login">Login</Link>
+                        </Message>
                     </Segment>
                     {error ? <ErrorMessage error={error} /> : null}
                 </Form>
-                <Message>
-                    Been here before? <Link to="/login">Login</Link>
-                </Message>
+                
                 
             </Grid.Column>
         </Grid>
