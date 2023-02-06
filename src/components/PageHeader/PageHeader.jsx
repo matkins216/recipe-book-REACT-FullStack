@@ -12,9 +12,9 @@ function PageHeader({ loggedUser, handleLogout }) {
         <Link to="" onClick={handleLogout}>
           Logout
         </Link>
-        <Link to="/discover" floated='right'>
+        {/* <Link to="/discover" floated='right'>
           <Icon name="globe"></Icon>
-        </Link>
+        </Link> */}
       </Header>
       <Header as="h2" floated="left">
         <Link to={`/${loggedUser?.username}`}>
