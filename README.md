@@ -13,16 +13,16 @@ Users on Recipe Book will be able to upload a photo of their recipe and give ste
 
 ## How To Use/Wireframe (Images Attached):
 - - -
-1. Homepage/Landing Page:(public/home.png)
+1. Homepage/Landing Page:![homepage](public/hompage.png)
     This will be your feed where you can view other users' posts along with your own. You can like recipes on this page. You will also be able to post your own recipes from here.
 
-2. Profile Page:
+2. Profile Page:![profile](public/profilepage.png)
     This page will display all of your own recipes that you have posted. It includes your bio snippet and photo.
 
-3. Signup Page:
+3. Signup Page:![signup](public/signup.png)
     Signup is simple with username, email, password, password confirm, and profile picture
 
-4. Login Page: 
+4. Login Page:![login](public/login.png)
     At login you will enter your email you signed up with and password in order to create posts and like recipes.
   
 
