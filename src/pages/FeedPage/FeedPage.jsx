@@ -5,7 +5,7 @@ import Loader from "../../components/Loader/Loader";
 
 import { useState, useEffect } from "react";
 
-// import { create } from '../../utils/postApi'
+
 import * as postsAPI from "../../utils/postApi";
 import * as likesAPI from "../../utils/likeApi";
 
@@ -13,8 +13,7 @@ import * as likesAPI from "../../utils/likeApi";
 
 import { Grid } from "semantic-ui-react";
 
-// think of your pages as containers
-// that store your logic!
+
 function FeedPage({ loggedUser, handleLogout }) {
     const [posts, setPosts] = useState([]);
     const [loading, setLoading] = useState(true);

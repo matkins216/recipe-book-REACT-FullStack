@@ -38,8 +38,8 @@ export default function DiscoverPage({ handleLogout, loggedUser }) {
         <Card>
             <Image src={r.image} wrapped ui={false} />
             <Card.Content>
-                <Card.Header></Card.Header>
-                <Card.Meta>Joined in 2016</Card.Meta>
+                <Card.Header>{r.title}</Card.Header>
+                <Card.Meta></Card.Meta>
                 <Card.Description>
 
                 </Card.Description>
