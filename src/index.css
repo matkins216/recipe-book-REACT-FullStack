@@ -1,5 +1,8 @@
-.root {
-  color: grey;
+#root {
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 12px;
+  text-align: center;
 }
 body {
   background: rgb(144, 235, 235);
