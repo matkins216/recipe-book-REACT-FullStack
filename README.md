@@ -1,5 +1,5 @@
 # Task Terminator
-Created by: Matthew Atkins, Sophia Barber and Anthony Siletti
+Created by: Matthew Atkins
 - - -
 "Launch Recipe Book here"
 https://odd-plum-clam-vest.cyclic.app/
@@ -13,7 +13,7 @@ Users on Recipe Book will be able to upload a photo of their recipe and give ste
 
 ## How To Use/Wireframe (Images Attached):
 - - -
-1. Homepage/Landing Page:
+1. Homepage/Landing Page:(Screenshot from 2023-02-06 06-16-31.png)
     This will be your feed where you can view other users' posts along with your own. You can like recipes on this page. You will also be able to post your own recipes from here.
 
 2. Profile Page:
@@ -29,12 +29,12 @@ Users on Recipe Book will be able to upload a photo of their recipe and give ste
 
 ## Trello:
 - - -
-![trelloBoard]()
+![trelloBoard](Screenshot from 2023-02-06 06-20-58.png)
 https://trello.com/b/dI31QbTy/project-4
 
 ## ERD:
 - - -
-![erdPic]()
+![erdPic](Screenshot from 2023-02-05 18-38-26.png)
 
 ##  Technologies Used:
 - - -
@@ -44,8 +44,8 @@ MongoDB, Express, React, Node, Semantic UI
 ##  Next Steps for the Future:
 - - -
  In the future I would like to:
-   1. Save Recipes from other Users to a personal recipe book
-   2. Recipes that are private and can't be viewed publicly
-   3. Edit Recipes
-   4. Delete Recipes
-   5. Share Recipe
+   1. Save recipes from other Users to a personal recipe book
+   2. Have recipes that are private and can't be viewed publicly
+   3. Edit recipes
+   4. Delete recipes
+   5. Share recipe
