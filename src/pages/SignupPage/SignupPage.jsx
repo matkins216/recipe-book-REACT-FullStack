@@ -1,9 +1,9 @@
 
-import { Button, Form, Grid, Header, Segment, Icon, Message, Link } from "semantic-ui-react";
+import { Button, Form, Grid, Header, Segment, Icon, Message } from "semantic-ui-react";
 import { useState } from "react";
 import ErrorMessage from '../../components/ErrorMessage/ErrorMessage';
 
-import { useNavigate } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
 
 import userService from "../../utils/userService";
 import LoginPage from "../LoginPage/LoginPage";
