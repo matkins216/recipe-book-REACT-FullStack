@@ -1,5 +1,5 @@
 
-import { Button, Form, Grid, Header, Segment, Icon } from "semantic-ui-react";
+import { Button, Form, Grid, Header, Segment, Icon, Message } from "semantic-ui-react";
 import { useState } from "react";
 import ErrorMessage from '../../components/ErrorMessage/ErrorMessage';
 
@@ -125,6 +125,9 @@ function SignUpPage({ handleSignUpOrLogin }) {
                     </Segment>
                     {error ? <ErrorMessage error={error} /> : null}
                 </Form>
+                <Message>
+                    Been here before? <Link to="/login">Login</Link>
+                </Message>
                 
             </Grid.Column>
         </Grid>
