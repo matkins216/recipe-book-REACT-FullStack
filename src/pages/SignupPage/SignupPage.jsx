@@ -125,6 +125,9 @@ function SignUpPage({ handleSignUpOrLogin }) {
                     </Segment>
                     {error ? <ErrorMessage error={error} /> : null}
                 </Form>
+                <Message>
+                    Been here before? <Link to="/login">Login</Link>
+                </Message>
                 
             </Grid.Column>
         </Grid>
