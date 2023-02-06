@@ -6,6 +6,7 @@ import ErrorMessage from '../../components/ErrorMessage/ErrorMessage';
 import { useNavigate } from "react-router-dom";
 
 import userService from "../../utils/userService";
+import LoginPage from "../LoginPage/LoginPage";
 
 function SignUpPage({ handleSignUpOrLogin }) {
     const [state, setState] = useState({
@@ -119,6 +120,9 @@ function SignUpPage({ handleSignUpOrLogin }) {
                         </Form.Field>
                         <Button type="submit" className="btn">
                             Signup
+                        </Button>
+                        <Button>
+                            <LoginPage />
                         </Button>
                     </Segment>
                     {error ? <ErrorMessage error={error} /> : null}
